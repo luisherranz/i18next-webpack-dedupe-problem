@@ -1,4 +1,4 @@
-# i18next Webpack Dedupe Problem
+# i18next Dedupe FixModuleIdAndChunkIdPlugin ReactDOM Problem
 
 If you load the `dist/index.html` file in your browser, you can see the error in the console:
 
