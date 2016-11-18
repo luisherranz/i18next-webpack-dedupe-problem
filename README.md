@@ -1,4 +1,4 @@
-# i18next Dedupe FixModuleIdAndChunkIdPlugin ReactDOM Problem
+# The i18next Dedupe FixModuleIdAndChunkIdPlugin ReactDOM Problem
 
 If you load the `dist/index.html` file in your browser, you can see the error in the console:
 
@@ -10,7 +10,7 @@ This problem appears when a combination of these things happens:
 
 - A vendors bundled with `DllPlugin` containing at least `i18next`, `i18next-xhr-backend` and `react-dom`.
 - Version of `react-dom` is 15.4.0.
-- Both plugins `DedupePlugin` and `FixModuleIdAndChunkIdPlugin` are used in the vendors bundle.
+- Both plugins [`DedupePlugin`](https://webpack.github.io/docs/list-of-plugins.html#dedupeplugin) and [`FixModuleIdAndChunkIdPlugin`](https://github.com/cfansimon/fix-moduleid-and-chunkid-plugin) are used in the vendors bundle.
 
 If you remove any of the above conditions, the problem disappears. For example, it works again if you:
 
