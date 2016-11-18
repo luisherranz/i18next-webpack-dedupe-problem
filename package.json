@@ -1,0 +1,25 @@
+{
+  "name": "i18next-webpack-dedupe-problem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "clean": "rimraf dist/*.js*",
+    "build:bundle": "webpack --config webpack.config.js --progress",
+    "build:vendors": "webpack --config webpack.vendors.js --progress",
+    "start": "npm run clean && npm run build:vendors && npm run build:bundle"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fix-moduleid-and-chunkid-plugin": "^0.1.1",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "i18next": "3.5.2",
+    "i18next-xhr-backend": "^1.2.0",
+    "react-dom": "^15.3.2"
+  }
+}
