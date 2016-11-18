@@ -18,6 +18,17 @@ If you remove any of the above conditions, the problem disappears. For example, 
 - Remove the `DedupePlugin` of the vendors build process.
 - Remove the `FixModuleIdAndChunkIdPlugin` of the vendors build process.
 
+It happens with any version of i18next, so it's not related with the [webpack2](https://github.com/i18next/i18next/issues/836) problem.
+
+It can be solved if you add *something* to the `node_modules/i18next/index.js` file, like for example:
+
+```javascript
+var a;
+module.exports = require('./dist/commonjs/index.js').default;
+```
+
+Any small change is enough to make it work.
+
 ----
 
 You can generate a new build using `npm start`.
